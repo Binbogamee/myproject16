@@ -1,0 +1,13 @@
+<div class="note">
+  <div>{{mynote.id}}. Тип: {{temptype}}</div>
+  <div>{{mynote.name}}</div>
+  <div>{{mynote.text}}</div>
+  <div class="col-12">Дата создания:
+    {{mynote.createDate | date:"dd.MM.yyyy"}}
+    {{mynote.createDate | date:"HH:mm:ss"}}
+  </div>
+  <div class="col-12" *ngIf="mynote.editDate != undefined">Последнее изменение:
+    {{mynote.editDate | date:"dd.MM.yyyy"}}
+    {{mynote.editDate | date:"HH:mm:ss"}}
+  </div>
+</div>

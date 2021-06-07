@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-primary" (click)="linkToItem()">Создать</button>
+  </div>
+  <div class="row mb-3">
+    <div class="col-sm-12 col-lg-6 notes" *ngFor="let note of notes" (click)="linkToItem(note.id)">
+      <app-mynote [mynote]="note" [types]="types"></app-mynote>
+    </div>
+  </div>
+</div>
